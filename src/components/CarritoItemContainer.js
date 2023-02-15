@@ -4,8 +4,8 @@ import CarritoItem from './CarritoItem';
 const CarritoItemContainer = () => {
     const {carrito, modificarCantidad, eliminarProducto,vaciarCarrito} = useCarrito();
     
-    const handleModificarCantidad = (id, cantidad) => {
-        modificarCantidad(id, cantidad);
+    const handleModificarCantidad = (id, nuevaCantidad) => {
+        modificarCantidad(id, nuevaCantidad);
     }
 
     const handleEliminarProducto = (id) => {
@@ -29,7 +29,7 @@ const CarritoItemContainer = () => {
                         <CarritoItem
                             producto={producto}
                             key={producto.id}
-                            modificarCantidadC={handleModificarCantidad}
+                            modificarCantidad={handleModificarCantidad}
                             eliminarProductoC={handleEliminarProducto}
                             vaciarCarritoC={handleVaciarCarrito}
                         />

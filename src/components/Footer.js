@@ -6,7 +6,7 @@ const Footer = () => {
             <NavBar
                 textLinkFooter="Instagram"
                 hrefLinkFooter="https://www.instagram.com/"
-                textLinkFooter2= "Copyright 2022"
+                textLinkFooter2= "Copyright - Proyecto Final React 43575"
 
             />
         </footer>

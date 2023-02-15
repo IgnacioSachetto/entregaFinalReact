@@ -19,9 +19,13 @@ const ItemDetail = ({ productos }) => {
           />
           <div className="descripcionDelProducto">
             {productos.description}
+            <br/>
+            <ItemCount productos={productos} onAdd={onAdd}/>
+
           </div>
+
         </div>
-        <ItemCount productos={productos} onAdd={onAdd}/>
+        
       
       </div>
     );

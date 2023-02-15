@@ -22,24 +22,24 @@ const ItemCount = ({productos, onAdd}) => {
         agregarProducto(productos,cantidad);
       }
 
-     
-
-
-    
-
     return (
       <>        
     <div className="cantidad-botones">
       <button className="cantidad-boton" onClick={handleRestar}>-</button>
-        <span className="cantidad-medio">{cantidad}</span>
+        <span className="cantidad-medio-detail">{cantidad}</span>
       <button className="cantidad-boton" onClick={handleSumar}>+</button>
 
     </div>
     <div className="contenedorBotonComprar">
           <button className="botonComprar" onClick={confirmarACarro}>
-            Comprar {productos.price * cantidad}
+            Comprar ${productos.price * cantidad} <br/>
+                          Stock: {productos.stock}
+
           </button>
+
     </div>
+
+
     </>
     )
   }

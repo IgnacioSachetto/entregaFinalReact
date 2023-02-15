@@ -2,37 +2,46 @@ import React from 'react'
 import { useState , useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
-
+import {db} from '../firebase'
+import { collection , getDocs , query , where } from 'firebase/firestore'
+import {toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemListConteiner = () => {
-    
-    const [contador,setContador]  = useState(0)
-    const [searchText, setSearchText] = useState("")
     
     let props = useParams();
     console.log ("props es:" + props.categoria)
 
-    const handleClick = () => {
-        setContador (contador+1)
-    }
-    
-    const handleOnChange = (e) => {
-        setSearchText(e.target.value)
-    }
-
     const [productos,setProductos] = useState([])
 
-    let urlFinal = "https://fakestoreapi.com/products"
-    
-
     useEffect(() => {
-
+        var productosCollection=null
         if(props.categoria!==undefined){
-            urlFinal="https://fakestoreapi.com/products/category/"+props.categoria
+            productosCollection = query(collection(db,'productos'),where('category','==',props.categoria));
+        }else{
+            productosCollection = collection(db,'productos');
         }
 
+        const pedidoFirestore = getDocs(productosCollection);
+        const productosFirestore=[];
+
+        pedidoFirestore
+        .then((respuesta)=>{
+            toast.warn("Cargando productos")
+
+            respuesta.docs.forEach(doc=>{
+                const productosCategoria ={id: doc.id , ...doc.data()};
+                productosFirestore.push(productosCategoria); 
+                toast.dismiss()
+                toast.success("Productos Cargados")
+            })
+            setProductos(productosFirestore);
+        })
+        .catch((error)=>{
+            toast.error("Error"+error.message)
+        })
         
-        const productosAPI = fetch(urlFinal)
+        /*const productosAPI = fetch(urlFinal)
 
         productosAPI
             .then((respuesta) => {
@@ -45,7 +54,7 @@ const ItemListConteiner = () => {
             })
             .catch((error) => {
                 console.log(error)
-            })
+            })*/
 
     }, [props.categoria])
 

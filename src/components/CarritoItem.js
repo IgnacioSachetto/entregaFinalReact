@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { useCarrito } from './CustomProvider';
+import { Link } from "react-router-dom"
 
-const CarritoItem = ({ producto, onAdd ,vaciarCarritoC,eliminarProductoC}) => {
+const CarritoItem = ({ producto,vaciarCarritoC,eliminarProductoC}) => {
     
     const [cantidad, setCantidad] = useState(1);
     const [cantidadUpdate, setCantidadUpdate] = useState(producto.cantidad);
-
-
-
     const {agregarProducto} = useCarrito();
+
+    const {modificarCantidad} = useCarrito();
 
 
 
@@ -27,14 +27,25 @@ const CarritoItem = ({ producto, onAdd ,vaciarCarritoC,eliminarProductoC}) => {
     const handleVaciarCarrito = () => {
         vaciarCarritoC();
     }
-    
-    const confirmarACarro = () => {
-        setCantidad(1)
-        setCantidadUpdate(cantidadUpdate + cantidad);
-        const nuevoProducto = {...producto, cantidad: producto.cantidad + cantidadUpdate};
-        onAdd(nuevoProducto.cantidad);
-        agregarProducto(nuevoProducto, nuevoProducto.cantidad);
+
+    const handleModificarCantidad = (id,cantidad) => {
+        console.log("Cantidad Agregada es:" + (cantidad))
+        const nuevaCantidad = cantidad+producto.cantidad;
+        console.log(nuevaCantidad+"nueva es <-")
+        modificarCantidad(id, nuevaCantidad);
     }
+
+
+    const confirmarACarro = () => {
+        setCantidadUpdate(cantidad+producto.cantidad)
+        const nuevoProducto = {...producto, cantidad: producto.cantidad + cantidadUpdate};
+        handleModificarCantidad(nuevoProducto.id, cantidad);
+
+
+    }
+
+
+
 
     const handleEliminar = (id) => {
         eliminarProductoC(id);
@@ -79,6 +90,7 @@ return (
             </div>
         </div>
         <button className='botonVaciarCarrito' onClick={() => handleVaciarCarrito(producto.id)}>Vaciar Carrito</button>
+        <Link className="botonConfirmarCompra" to="/checkout/">Confirmar Compra</Link>
 
     </article>
 )

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import { useCarrito } from './CustomProvider';
+import imagenCarrito from '../carrito.png';
+
 
 export const CardWidget = () => {
 
@@ -9,11 +11,13 @@ export const CardWidget = () => {
   return (
     <div className="objeto">
       <Link className="headerLink" to="/carrito">
-        Carrito {totalProductos}
+       
+        <img className="imagenCarrito" src={imagenCarrito}  alt="Carrito de compras" />  {totalProductos}
 
       </Link>
-      <img src="../img/carrito.png" alt="Carrito de compras" />
+
     </div>
+    
   );
 };
 

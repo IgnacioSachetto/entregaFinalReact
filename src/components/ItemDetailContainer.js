@@ -1,44 +1,37 @@
 import React from 'react'
 import { useState , useEffect } from 'react'
-import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail'
+import {db} from '../firebase'
+import { collection , getDocs , query, where } from 'firebase/firestore'
+import { useParams } from 'react-router-dom'
+import { toast } from 'react-toastify'
+
 
 const ItemDetailContainer = () => {
     
-    const [contador,setContador]  = useState(0)
-    const [searchText, setSearchText] = useState("")
-    
-    let props = useParams();
-    console.log ("props es:" + props.id)
-
     const [productos,setProductos] = useState([])
-
-    let urlFinal = "https://fakestoreapi.com/products"
-    
+    const props = useParams();
 
     useEffect(() => {
 
-        if(props.id!==undefined){
-            urlFinal="https://fakestoreapi.com/products/"+props.id
-        }
+        const queryIdProducto = query(collection(db, 'productos'),where('__name__','==',props.id));
+        const pedidosFirestore = getDocs(queryIdProducto);
 
-        
-        const productosAPI = fetch(urlFinal)
+        pedidosFirestore
+            .then((respuesta)=>{
+                toast.warn("Cargando Producto")
 
-        productosAPI
-            .then((respuesta) => {
-                const productos = respuesta.json()
-                return productos
+                const productosFiltrado = {id: props.id , ...respuesta.docs[0].data()};
+                setProductos(productosFiltrado);
+                toast.dismiss()
+                toast.success("Producto Cargado")
 
             })
-            .then((productos) => {
-                setProductos(productos)
+            .catch((error)=>{
+                toast.error("Error"+error.message)
             })
-            .catch((error) => {
-                console.log(error)
-            })
-
-    }, [props.id])
+      
+    },[props.id])
 
         return (
             <div>

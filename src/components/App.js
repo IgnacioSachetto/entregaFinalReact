@@ -5,7 +5,7 @@ import Footer from "./Footer"
 import Main from "./Main"
 import {BrowserRouter} from "react-router-dom"
 import CustomProvider from './CustomProvider';
-
+import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
 
@@ -18,6 +18,8 @@ function App() {
           <Main/>
           <Footer/>  
         </BrowserRouter>
+        <ToastContainer autoClose={3000}     position= "bottom-right"
+/>
       </CustomProvider>
    
     </>
