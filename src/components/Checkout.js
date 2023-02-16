@@ -18,7 +18,6 @@ const Checkout = () => {
   const [ciudad, setCiudad] = useState("")
   const [codigoPostal, setCodigoPostal] = useState("")
   const [telefono, setTelefono] = useState("")
-
   const { carrito, totalCarrito, vaciarCarrito } = useCarrito();
 
   const validarOrden = (orden) => {
@@ -29,6 +28,7 @@ const Checkout = () => {
     var direccion = false;
     var codigoPostal = false;
     var telefono = false;
+
 
     if (orden.nombre.length < 3) {
       toast.error("Nombre no válido, ingrese un nombre con más de dos caracteres");
@@ -83,6 +83,13 @@ const Checkout = () => {
 
   const handleClick = (e) => {
 
+    var firebaseNuevaOrden= [];
+    var arrayProductoVenta;
+    carrito.map((productoItem) => {
+        arrayProductoVenta={productoNombre:productoItem.title, cantidad:productoItem.cantidad}
+        return firebaseNuevaOrden.push(arrayProductoVenta)
+    });
+
     const nuevaOrden = {
       nombre: nombre,
       apellido: apellido,
@@ -92,6 +99,10 @@ const Checkout = () => {
       codigoPostal: codigoPostal,
       direccion: direccion,
       fecha: serverTimestamp(),
+      total: totalCarrito(),
+      productoVendido: firebaseNuevaOrden
+
+
     };
 
     if (validarOrden(nuevaOrden) === true) {
