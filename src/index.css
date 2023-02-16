@@ -415,6 +415,15 @@ button[disabled] {
   cursor: not-allowed;
 }
 
+.contenedor-botones {
+  max-width: 600px; /* ajusta el ancho máximo según tus necesidades */
+  margin: 20px auto;
+  height: 200px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
 .botonVaciarCarrito {
   position: absolute;
   left: 50%;
@@ -433,6 +442,7 @@ button[disabled] {
 .botonConfirmarCompra {
   position: relative;
   top: 70px;
+  bottom:0px;
   left:0px;
   display: block;
   margin: 20px auto 20px auto;

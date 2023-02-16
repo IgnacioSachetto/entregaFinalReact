@@ -10,7 +10,7 @@ const CarritoBotones = () => {
   }
 
   return (
-    <div>
+    <div className='contenedor-botones'>
     <Link className='botonVaciarCarrito' onClick={() => handleVaciarCarrito()}>Vaciar Carrito</Link>
     <Link className="botonConfirmarCompra" to="/checkout/">Confirmar Compra</Link>
     </div>
