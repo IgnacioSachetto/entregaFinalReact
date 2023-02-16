@@ -229,9 +229,8 @@ const Checkout = () => {
               <input type="number" name="codigoPostal" onChange={handleChangeCodigoPostal} placeholder="Codigo Postal"/>
             </label>
             <div className='contenedor-boton-compra'>
-            <Link className="finalizar-compra" onClick={handleClick}>Finalizar Compra</Link>
-
-          </div>
+              <Link className="finalizar-compra" onClick={handleClick}>Finalizar Compra</Link>
+            </div>
           </form>
 
 

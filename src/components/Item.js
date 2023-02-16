@@ -5,7 +5,7 @@ const Item = ({producto}) => {
 
         <div className="divProductos">
             <article key={producto.id}>
-                <h3>{producto.title}</h3>
+                <h3 className="title-producto">{producto.title}</h3>
                 <img className = "productoPrincipal" src={producto.image} alt={producto.title} />
 
 

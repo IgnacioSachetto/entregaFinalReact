@@ -159,10 +159,10 @@ footer {
 .botonComprar {
   background-color: #2ecc71;
   color: white;
-  font-size: 2rem;
+  font-size: 20px;
   border: none;
-  width: 400px;
-  height: 100px;
+  width: 200px;
+  height: 75px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -174,26 +174,28 @@ footer {
 .contenedorBotonComprar {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
 }
 
 .divProductos {
   background-color: rgba(173, 10, 173, 0.74);
   display: inline-block;
-  width: 27%;
+  width: 400px; /* ancho de los elementos */
   text-align: center;
-  margin: 50px 3% 20px 2.5%;
-  height: auto;
+  margin: 20px 20px 20px 20px;
   vertical-align: top;
+  height: auto;
   border: 3px solid white;
   color: white;
   box-shadow: 0 28px 26px 0 rgba(10, 10, 10, 0.2), 0 6px 20px 0 rgb(0, 0, 0);
   font-family: 'Montserrat', sans-serif;
-  }
-  
-  .divProductos:hover {
+}
+.title-producto{
+  height:50px;
+  background-color: rgb(116, 1, 116);
+}
+.divProductos:hover {
   box-shadow: 0 38px 36px 0 rgba(10, 10, 10, 0.3), 0 8px 30px 0 rgb(0, 0, 0);
-  }
+} 
   .contenedorImagenDescripción {
     display: flex;
     flex-direction: row;
@@ -204,8 +206,8 @@ footer {
   
 
   .imagenDelProducto {
-    width: 60%;
-    height: 100%;
+    width: 40%;
+    height: 90%;
     border:2px solid black;
     max-width: 1000px;
   }
@@ -213,6 +215,8 @@ footer {
   
   .imagenDelProducto:hover {
     cursor: pointer;
+    width: 50%;
+    height: 100%;
     border:5px solid black;
     }
 
@@ -222,7 +226,8 @@ footer {
       overflow: auto;
       padding: 1rem;
       color:white;
-      font-size: 35px;
+      font-size: 20px;
+    
     }
     
     .descripcionDelProducto p {
@@ -254,8 +259,8 @@ footer {
   border:1px solid white;
   color: white;
   background-color: rgb(56, 1, 56);
-    text-align: center;
-  font-size: 35px;
+  text-align: center;
+  font-size: 25px;
   margin: 2px;
   }
 
@@ -263,17 +268,17 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
+    justify-content: top;
   }
   .cantidad-boton {
-    padding: 0.5em 1em;
+    padding: 5px 10px;
     background-color: #e6e6e6;
     border: 1px solid #333;
     border-radius: 4px;
-    font-size: 1em;
+    font-size: 15px;
     text-align: center;
     cursor: pointer;
+    justify-content: top;
   }
   
   .cantidad-boton:hover {
@@ -283,12 +288,11 @@ footer {
   
 
   .cantidad-medio {
-    margin:auto 50px;
-    font-size: 30px;
+    margin:auto 20px;
+    font-size: 25px;
     font-weight: bold;
     border-radius: 4px;
     text-align: center;
-    width: 20px;
     color:black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
@@ -297,7 +301,7 @@ footer {
   
   .cantidad-medio-detail {
     margin: 0 1rem;
-    font-size: 1.5rem;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 4px;
     text-align: center;
@@ -308,7 +312,7 @@ footer {
   }
 
   .cantidad-medio-carrito{
-    font-size: 30px;
+    font-size: 15px;
     color:black;
   }
 
@@ -332,7 +336,7 @@ footer {
 
 .contenedorTarjeta {
   width: 85%;
-  height: 400px;
+  height: 200px;
   margin: 10px auto;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -346,12 +350,12 @@ footer {
 }
 
 .contenedorImg {
-  width: 40%;
+  width: 50%;
 }
 
 .imagenTarjeta {
   width: 100%;
-  height:auto;
+  height:100%;
   max-height: 400px;
 }
 
@@ -360,9 +364,9 @@ footer {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
   justify-content: center;
-  font-size: 40px;
+  font-size: 15px;
 }
 
 .contenedorEstadisticas {
@@ -377,8 +381,12 @@ footer {
 }
 
 .estadisticasTarjeta {
-  font-size: 40px;
+  font-size: 15px;
   font-weight: bold;
+  height: 100%;
+  width:150px;
+  text-align: center;
+  margin-top:auto;
 }
 
 .contenedorBotones {
@@ -395,7 +403,7 @@ button {
   padding: 5px 10px;
   margin: 0 10px;
   cursor: pointer;
-  font-size: 40px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -406,34 +414,41 @@ button[disabled] {
 
 .botonVaciarCarrito {
   position: absolute;
-  bottom: 150px; 
   left: 50%;
   transform: translateX(-50%);
-  background-color: lightgray;
-  color: black;
-  border: none;
-  border-radius: 5px;
-  border: 5px solid wheat;
-  padding: 20px 50px;
-  font-size: 28px;
-  cursor: pointer;
-}
-.botonConfirmarCompra {
-  position: absolute;
-  bottom: 50px; 
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: dodgerblue;
+  background-color: red;
   color: white;
   border: none;
   border-radius: 5px;
-  padding: 20px 50px;
-  font-size: 28px;
-  width: 500px;
+  padding: 10px 30px;
+  font-size: 25px;
+  width: 300px;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
 }
+.botonConfirmarCompra {
+  position: relative;
+  top: 70px; 
+  left:10px;
+  display: block;
+  margin: 20px auto 20px auto;
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  font-size: 25px;
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+
+
+
 
 
 .botonVaciarCarrito:hover {
@@ -444,13 +459,13 @@ button[disabled] {
   .botonConfirmarCompra:hover {
     background-color:   #1cc074;
     cursor: pointer;
-    border: 5px solid white;
+    border: 2px solid white;
 }
 
 
     
 .tituloProducto {
-    font-size: 56px;
+    font-size: 25px;
     text-align: center;
     padding: 20px;
     font-weight: bold;
@@ -475,14 +490,14 @@ button[disabled] {
       background-color: #008CBA;
       border: none;
       color: #fff;
-      padding: 20px 50px;
+      padding: 10px 30px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
-      font-size: 26px;
-      margin: 10px;
+      font-size: 15px;
       border-radius: 5px;
       cursor: pointer;
+
 }
     
 .botonConfirmar:hover {
@@ -507,7 +522,7 @@ button[disabled] {
   align-items: flex-start;
   width: 50%;
   height: 92%;
-  font-size: 25px;
+  font-size: 15px;
   font-style: italic;
   background-color: rgb(130, 52, 130);
   color:white;
@@ -532,15 +547,15 @@ button[disabled] {
 
 .formulario h2 {
   margin-bottom: 2rem;
-  font-size: 35px;
+  font-size: 20px;
   font-weight: bold;
   color:white;
 }
 
 
 .formulario input {
-  height: 70px;
-  width: 1000px;
+  height: 30px;
+  width: 450px;
   background-color: #000000;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -551,7 +566,7 @@ button[disabled] {
 }
 
 .formulario [placeholder]{
-  font-size: 26px;
+  font-size: 20px;
   font-family: inherit;
   font-style: italic;
   font-weight: bold;
@@ -564,13 +579,13 @@ button[disabled] {
 }
 
 .finalizar-compra {
-  height: 90px;
+  height: 50px;
   width: 100%;
   background-color: #2ecc71;
   color: #fff;
   border: none;
   border-radius: 5px;
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
@@ -593,9 +608,9 @@ button[disabled] {
 
 
 .ventaExito {
-  background-color: #bee863;
+  background-color: #b3eb3c;
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 20px;
   text-align: center;
   padding: 5rem;
   position: absolute;
@@ -608,7 +623,7 @@ button[disabled] {
 }
 
 .ventaExito-cont {
-  font-size: 4rem;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 2rem;
 }
@@ -618,7 +633,7 @@ button[disabled] {
   background-color: rgb(78, 35, 78);
   color: #fff;
   padding: 12px 16px;
-  font-size: 26px; 
+  font-size: 20px; 
   font-weight: bold;
   text-align: center;
   border-radius: 4px;
@@ -633,9 +648,10 @@ button[disabled] {
 
 .ventaExito-cont-contador {
   color: black;
-  font-size: 26px; 
+  font-size: 20px; 
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   border:none;
 }
+

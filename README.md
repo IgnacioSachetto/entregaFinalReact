@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# DOCUMENTACIÓN
+Descripción de la aplicación
+La aplicación fue generada para el curso de "React JS" de Coderhouse, la misma se base en  un e-commerce el cual contará con una seríe de productos directamente cargados en Firebase estos incluyen un título, un precio, una categoria, una descripción, entre otros atributos.La aplicación permite al usuario seleccionar diferentes categoría "Hombres" "Mujeres" "Electronicos" "Joyería" el usuario podrá ingresar a cada uno de los productos para obtener más información sobre el mismo para luego en caso de desearlos poder comprarlos, para eso el usuario debe ingresar al producto seleccionar una cantidad, esta cantidad se verá reflejada en el carrito. Una vez en el carrito, en caso de arrepetinse el usuario podría modificar la cantidad y confirmar la compra. Para confirmar la compra debe llenar una serie de datos personales, si la compra se genero exitosamente se le mostrará al usuario la noticación correspondiente y se le proporcionara la id de compra generada automaticamente por Firebase.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# USO E INSTALACIÓN
 
-## Available Scripts
+Para usar la aplicación, se deberá descargar el código fuente desde el repositorio de GitHub. Luego, se deberá instalar las dependencias necesarias con el comando "npm install" o "yarn install". Una vez instalado todo lo necesario, se puede iniciar el proyecto con el comando "npm start" o "yarn start". Por último, para abrir la aplicación desde tu navegador,se tiene que acceder a http://localhost:3000. 
 
-In the project directory, you can run:
+# TECNOLOGIAS
 
-### `npm start`
+Para el desarrollo de la aplicación se utilizaron las siguientes tecnologías
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+React: es una herramienta para el desarrollo de aplicaciones web que nos permite controlar el estado y los efectos de la aplicación. Con React, podemos construir interfaces de usuario interactivas y escalables.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Firebase: es una plataforma que ofrece diversas herramientas y servicios para el desarrollo de aplicaciones web y móviles. En este proyecto, se utilizó su base de datos para conectarla con la aplicación, lo que permitió almacenar y consultar información en tiempo real.
 
-### `npm test`
+React-toastify: se utilizó para mostrar todas las notificaciones de la aplicación, tales como mensajes de éxito, error, informativos, etc. Esta dependencia proporciona una forma sencilla de mostrar mensajes de una manera atractiva y personalizable.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React-router-dom: es una dependencia que permite implementar el enrutamiento en aplicaciones web construidas con React. Se utilizaron componentes como Route, Link y BrowserRouter para definir las rutas de la aplicación y controlar la visualización de diferentes componentes en función de la URL actual.
 
-### `npm run build`
+React-scripts: es un conjunto de scripts y configuraciones preestablecidas para el desarrollo de aplicaciones web con React. React-scripts incluye tareas como la compilación, pruebas unitarias, optimización de recursos y despliegue en producción, lo que facilita el desarrollo y la distribución de la aplicación.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Bootstrap y React-bootstrap: Bootstrap es un framework de diseño web que proporciona componentes predefinidos y estilos para facilitar la creación de aplicaciones web modernas y responsivas. React-bootstrap es una versión de Bootstrap diseñada para ser utilizada con React, lo que permite aprovechar todas las ventajas de Bootstrap en el desarrollo de aplicaciones con React.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React-dom: es una biblioteca que se usa para permitir la representación de componentes de React en el DOM. React-dom renderiza los componentes de React en el navegador y permite interactuar con ellos a través de eventos y propiedades.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# VERCEL
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+La aplicación fue desplegada en la plataforma de alojamiento web Vercel de forma gratuita.
+El link para ingresar a la aplicación mediante vercel es el siguiente:
+https://entrega-final-react-ignaciosachetto.vercel.app/

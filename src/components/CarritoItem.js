@@ -66,11 +66,13 @@ return (
             </div>
             <div className='contenedorEstadisticas'>
                 <div className='estadisticasTarjeta'>
-                    Precio: ${producto.price}
-                    <br/>
-                    Cantidad: {cantidadUpdate}
-                    <br/>
-                    Total: ${(producto.price * cantidadUpdate)}
+                    <div className='textoTarjeta'>Precio: ${producto.price}
+                        <br/><br/>
+                        Cantidad: {cantidadUpdate}
+                        <br/><br/>
+                        Total: ${(producto.price * cantidadUpdate)}
+                        <br/>
+                    </div>
                 </div>
                 <div className="cantidad-botones">
                     <button className="cantidad-boton" onClick={handleRestar}>-</button>
@@ -88,11 +90,12 @@ return (
                 <button onClick={()=> handleEliminar(producto.id)}>Eliminar</button> 
 
             </div>
+            
         </div>
-        <button className='botonVaciarCarrito' onClick={() => handleVaciarCarrito(producto.id)}>Vaciar Carrito</button>
-        <Link className="botonConfirmarCompra" to="/checkout/">Confirmar Compra</Link>
 
     </article>
+       
+    
 )
 }
 

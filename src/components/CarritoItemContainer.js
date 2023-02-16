@@ -1,5 +1,6 @@
 import { useCarrito } from './CustomProvider';
 import CarritoItem from './CarritoItem';
+import CarritoBotones from './CarritoBotones';
 
 const CarritoItemContainer = () => {
     const {carrito, modificarCantidad, eliminarProducto,vaciarCarrito} = useCarrito();
@@ -26,6 +27,7 @@ const CarritoItemContainer = () => {
                 ) : (
                     carrito.map((producto) => {
                     return (
+                        <>
                         <CarritoItem
                             producto={producto}
                             key={producto.id}
@@ -33,6 +35,7 @@ const CarritoItemContainer = () => {
                             eliminarProductoC={handleEliminarProducto}
                             vaciarCarritoC={handleVaciarCarrito}
                         />
+                        </>
                     );
                 })
             )}
