@@ -10,7 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 const ItemListConteiner = () => {
 
     let props = useParams();
-    console.log("props es:" + props.categoria)
 
     const [productos, setProductos] = useState([])
 
