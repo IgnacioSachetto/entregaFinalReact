@@ -55,7 +55,7 @@ const Checkout = () => {
       email = true;
     }
 
-    if (orden.email === orden.emailVerificacion) {
+    if (orden.email !== orden.emailVerificacion) {
       toast.error("Los correos no son iguales")
     } else {
       emailVerificacion = true;
