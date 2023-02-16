@@ -145,7 +145,6 @@ const Checkout = () => {
   }
 
   useEffect(() => {
-    console.log("id orden es" + idOrden)
     if (idOrden !== '') {
       vaciarCarrito();
       navigate('/ventaGenerada/' + idOrden);

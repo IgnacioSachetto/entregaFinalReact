@@ -20,9 +20,7 @@ const CarritoItem = ({ producto, eliminarProductoC }) => {
     };
 
     const handleModificarCantidad = (id, cantidad) => {
-        console.log("Cantidad Agregada es:" + (cantidad))
         const nuevaCantidad = cantidad + producto.cantidad;
-        console.log(nuevaCantidad + "nueva es <-")
         modificarCantidad(id, nuevaCantidad);
     }
 
