@@ -157,7 +157,7 @@ const Checkout = () => {
         <h2>Lista de productos:</h2>
         {carrito.map((producto) => (
           <div className="productoEnCarrito" key={producto.id}>
-            <p>{producto.cantidad} X {producto.title}</p>
+            <p>{producto.cantidad} - {producto.title} - Precio Unitario: ${producto.price} - SubTotal: ${producto.price*producto.cantidad} </p>
           </div>
         ))}
         <h4>TOTAL DE COMPRA: ${totalCarrito()}</h4>
