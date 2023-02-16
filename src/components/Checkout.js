@@ -26,7 +26,6 @@ const Checkout = () => {
     var apellido = false;
     var ciudad = false;
     var email = false;
-    var emailVerificacion = false;
     var direccion = false;
     var codigoPostal = false;
     var telefono = false;
@@ -55,11 +54,7 @@ const Checkout = () => {
       email = true;
     }
 
-    if (orden.email !== orden.emailVerificacion) {
-      toast.error("Los correos no son iguales")
-    } else {
-      emailVerificacion = true;
-    }
+
 
     if (!/^\d{10}$/.test(orden.telefono)) {
       toast.error("El número de teléfono debe contener 10 dígitos numéricos sin espacios ni guiones");
@@ -79,7 +74,7 @@ const Checkout = () => {
       codigoPostal = true;
     }
 
-    if (nombre && apellido && ciudad && telefono && email && emailVerificacion && direccion && codigoPostal) {
+    if (nombre && apellido && ciudad && telefono && email && direccion && codigoPostal) {
       return true;
     } else {
       return false;
@@ -178,12 +173,6 @@ const Checkout = () => {
           <label>
             <br />
             <input type="email" name="email" onChange={handleChangeEmail} placeholder="Correo Electrónico" />
-          </label>
-          <br />
-
-          <label>
-            <br />
-            <input type="email" name="emailVerificacion" onChange={handleChangeEmail} placeholder="Repita Correo Electrónico" />
           </label>
           <br />
           <label>
