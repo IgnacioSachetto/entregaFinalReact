@@ -28,4 +28,4 @@ React-dom: es una biblioteca que se usa para permitir la representación de comp
 
 La aplicación fue desplegada en la plataforma de alojamiento web Vercel de forma gratuita.
 El link para ingresar a la aplicación mediante vercel es el siguiente:
-https://entrega-final-react-ignaciosachetto.vercel.app/
+https://entrega-final-react-nine.vercel.app/
