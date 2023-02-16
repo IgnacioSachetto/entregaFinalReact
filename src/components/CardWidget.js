@@ -11,13 +11,9 @@ export const CardWidget = () => {
   return (
     <div className="objeto">
       <Link className="headerLink" to="/carrito">
-       
         <img className="imagenCarrito" src={imagenCarrito}  alt="Carrito de compras" />  {totalProductos}
-
       </Link>
-
     </div>
-    
   );
 };
 

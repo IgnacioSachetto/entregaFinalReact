@@ -5,7 +5,7 @@ import Footer from "./Footer"
 import Main from "./Main"
 import {BrowserRouter} from "react-router-dom"
 import CustomProvider from './CustomProvider';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
 

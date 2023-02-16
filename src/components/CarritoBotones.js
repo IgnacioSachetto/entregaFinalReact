@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import { useCarrito } from './CustomProvider';
-const CarritoBotones = () => {
-    const {vaciarCarrito} = useCarrito();
 
-    
-    const handleVaciarCarrito = () => {
-        vaciarCarrito()
-    }
+const CarritoBotones = () => {
+  const {vaciarCarrito} = useCarrito();
+
+  const handleVaciarCarrito = () => {
+    vaciarCarrito()
+  }
 
   return (
     <div>

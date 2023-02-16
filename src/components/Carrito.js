@@ -7,9 +7,6 @@ const Carrito = () => {
             <CarritoItemContainer/>
             <CarritoBotones/>
         </>
-  
-
-
     )
 }
 

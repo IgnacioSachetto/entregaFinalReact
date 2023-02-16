@@ -1,10 +1,9 @@
 import { useCarrito } from './CustomProvider';
 import CarritoItem from './CarritoItem';
-import CarritoBotones from './CarritoBotones';
 
 const CarritoItemContainer = () => {
-    const {carrito, modificarCantidad, eliminarProducto,vaciarCarrito} = useCarrito();
-    
+    const { carrito, modificarCantidad, eliminarProducto, vaciarCarrito } = useCarrito();
+
     const handleModificarCantidad = (id, nuevaCantidad) => {
         modificarCantidad(id, nuevaCantidad);
     }
@@ -17,24 +16,24 @@ const CarritoItemContainer = () => {
         vaciarCarrito()
     }
 
-    
+
     return (
         <div>
             {carrito.length === 0 ? (
                 <div className="divCarritoGenerico">
                     <h2 className='tituloProducto'>Sin articulos</h2>
                 </div>
-                ) : (
-                    carrito.map((producto) => {
+            ) : (
+                carrito.map((producto) => {
                     return (
                         <>
-                        <CarritoItem
-                            producto={producto}
-                            key={producto.id}
-                            modificarCantidad={handleModificarCantidad}
-                            eliminarProductoC={handleEliminarProducto}
-                            vaciarCarritoC={handleVaciarCarrito}
-                        />
+                            <CarritoItem
+                                producto={producto}
+                                key={producto.id}
+                                modificarCantidad={handleModificarCantidad}
+                                eliminarProductoC={handleEliminarProducto}
+                                vaciarCarritoC={handleVaciarCarrito}
+                            />
                         </>
                     );
                 })
