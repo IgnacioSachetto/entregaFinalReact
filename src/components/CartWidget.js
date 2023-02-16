@@ -4,7 +4,7 @@ import { useCarrito } from './CustomProvider';
 import imagenCarrito from '../carrito.png';
 
 
-export const CardWidget = () => {
+export const CartWidget = () => {
 
   const {totalProductos} = useCarrito()
 
@@ -17,4 +17,4 @@ export const CardWidget = () => {
   );
 };
 
-export default CardWidget;
+export default CartWidget;

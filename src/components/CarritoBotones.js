@@ -11,7 +11,7 @@ const CarritoBotones = () => {
 
   return (
     <div>
-    <button className='botonVaciarCarrito' onClick={() => handleVaciarCarrito()}>Vaciar Carrito</button>
+    <Link className='botonVaciarCarrito' onClick={() => handleVaciarCarrito()}>Vaciar Carrito</Link>
     <Link className="botonConfirmarCompra" to="/checkout/">Confirmar Compra</Link> 
     </div>
  )

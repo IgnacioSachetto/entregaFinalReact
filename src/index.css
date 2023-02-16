@@ -158,12 +158,17 @@ footer {
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 35px;
+  vertical-align: middle;
 }
 
 
 .botonComprar:hover {
   background-color: #27ae60;
 }
+
 .contenedorBotonComprar {
   display: flex;
   justify-content: center;
@@ -275,6 +280,8 @@ footer {
   text-align: center;
   cursor: pointer;
   justify-content: top;
+  text-decoration: none;
+
 }
 
 .cantidad-boton:hover {
@@ -284,6 +291,7 @@ footer {
 
 
 .cantidad-medio {
+
   margin:auto 20px;
   font-size: 25px;
   font-weight: bold;
@@ -302,6 +310,7 @@ footer {
   text-align: center;
   width: 20px;
   color:white;
+  text-decoration: none;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -444,7 +453,7 @@ button[disabled] {
   cursor: pointer;
   }
 
-  .botonConfirmarCompra:hover {
+.botonConfirmarCompra:hover {
     background-color:   #1cc074;
     cursor: pointer;
     border: 2px solid white;
@@ -476,13 +485,14 @@ button[disabled] {
       background-color: #008CBA;
       border: none;
       color: #fff;
-      padding: 10px 30px;
+      padding: 10px 20px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
       font-size: 15px;
       border-radius: 5px;
       cursor: pointer;
+      margin: 5px;
 
 }
 
@@ -638,3 +648,18 @@ button[disabled] {
   border:none;
 }
 
+.botonEliminar {
+  background-color: #e74c3c;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 15px;
+  font-size: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botonEliminar:hover {
+  background-color: #c0392b;
+}

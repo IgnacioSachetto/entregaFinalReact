@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useCarrito } from './CustomProvider';
+import { Link } from 'react-router-dom';
 
 const CarritoItem = ({ producto, eliminarProductoC }) => {
 
@@ -57,19 +58,19 @@ const CarritoItem = ({ producto, eliminarProductoC }) => {
                         </div>
                     </div>
                     <div className="cantidad-botones">
-                        <button className="cantidad-boton" onClick={handleRestar}>-</button>
+                        <Link className="cantidad-boton" onClick={handleRestar}>-</Link>
                         <span className="cantidad-medio">{cantidad}</span>
-                        <button className="cantidad-boton" onClick={handleSumar}>+</button>
+                        <Link className="cantidad-boton" onClick={handleSumar}>+</Link>
 
                     </div>
                     <div className="contenedorBotonComprar">
-                        <button className="botonConfirmar" onClick={confirmarACarro}>
+                        <Link className="botonConfirmar" onClick={confirmarACarro}>
                             Confirmar: ${producto.price * (cantidadUpdate + cantidad)}
                             <br />
                             Agregar: {cantidad}
-                        </button>
+                        </Link>
                     </div>
-                    <button onClick={() => handleEliminar(producto.id)}>Eliminar</button>
+                    <Link className="botonEliminar" onClick={() => handleEliminar(producto.id)}>X</Link>
 
                 </div>
 

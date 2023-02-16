@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { CardWidget } from './CardWidget'
+import { CartWidget } from './CartWidget'
 
 const NavBar = (props) => {
     if (props.isHeader) {
@@ -10,7 +10,7 @@ const NavBar = (props) => {
                     <Link className="headerLink" to="/category/jewelery/">Joyeria</Link>
                     <Link className="headerLink" to="/category/mensclothing/">Hombres</Link>
                     <Link className="headerLink" to="/category/womensclothing/">Mujeres</Link>
-                    <CardWidget />
+                    <CartWidget />
                 </nav>
             </>
         )
